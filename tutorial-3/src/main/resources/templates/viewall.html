@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>View All Students</title>
+	</head>
+	<body>
+		<div th:each="student,iterationStatus: ${students}">
+			<h3 th:text="'No. ' + ${iterationStatus.count}">No. 1</h3>
+			<h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3>
+			<h3 th:text="'Name = ' + ${student.name}">Student Name</h3>
+			<h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3>
+			<hr/>
+		</div>
+	</body>
+</html>
